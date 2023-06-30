@@ -17,7 +17,7 @@ namespace ApiRealidadVirtual.Controllers
         {
             _logger = logger;
             _mapper = mapper;
-            Console.WriteLine("Esto es");
+            Console.WriteLine("Esto es gitHub 4");
         }
 
         [HttpGet("All")]
