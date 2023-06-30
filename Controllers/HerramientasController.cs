@@ -20,13 +20,13 @@ namespace ApiRealidadVirtual.Controllers
         }
 
         [HttpGet("All")]
-        public IActionResult GetAll()
+        public List<HerammientumConsultar> GetAll()
         {
             var herramienta = db.Herammienta.ToList();
 
             if(herramienta == null)
             {
-                return NotFound();
+                return null;
             }
 
             List<HerammientumConsultar> _herramienta = null;
@@ -37,10 +37,10 @@ namespace ApiRealidadVirtual.Controllers
             }
             catch(Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return null;
             }
 
-            return Ok(_herramienta);
+            return _herramienta;
         }
 
         [HttpGet]
