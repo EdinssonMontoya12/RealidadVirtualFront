@@ -17,6 +17,7 @@ namespace ApiRealidadVirtual.Controllers
         {
             _logger = logger;
             _mapper = mapper;
+            Console.WriteLine("Esto es git");
         }
 
         [HttpGet("All")]
